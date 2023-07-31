@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:get_x_tut/State_Management/counterController.dart';
 import 'package:get_x_tut/State_Management/counterScreen.dart';
 import 'package:get_x_tut/changeLang.dart';
-// import 'package:get_x_tut/State_Management/counterScreen.dart';
 import 'package:get_x_tut/image_picker/Image_picker.dart';
 import 'package:get_x_tut/third_screen.dart';
 
@@ -31,6 +30,8 @@ class _HomeScreenState extends State<HomeScreen> {
         actions: [
           Builder(builder: (context) {
             return Obx(() => Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Switch(
                         value: switchcontroller.themeValue.value,
@@ -42,9 +43,9 @@ class _HomeScreenState extends State<HomeScreen> {
                               : Get.changeTheme(
                                   ThemeData.light(useMaterial3: true));
                         }),
-                    Text(switchcontroller.themeValue.value
-                        ? "Dark Mode"
-                        : "Light Mode")
+                Text(switchcontroller.themeValue.value
+                        ? "Dark Mode On"
+                        : "Light Mode On")
                   ],
                 ));
           }),
@@ -239,12 +240,15 @@ class _HomeScreenState extends State<HomeScreen> {
                     borderRadius: BorderRadius.circular(15)),
                 child: ListTile(
                   onTap: () {
-                    Get.to(() => ThirdScreen(
-                          lighttheme: lighttheme,
-                        ));
+                    Get.to(() => Obx(() => ThirdScreen(
+                          themevalue: switchcontroller.themeValue.value,
+                        )));
                   },
                   title: const Text("GetX Open Screen With Pass Data"),
-                  subtitle: Text("Previous Screen Light Theme : $lighttheme"),
+                  subtitle: Obx(
+                    () => Text(
+                        "Previous Screen Light Theme : ${switchcontroller.themeValue.value}"),
+                  ),
                   enableFeedback: true,
                 ),
               ),

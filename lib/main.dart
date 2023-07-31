@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: '/ThirdScreen',
           page: () => ThirdScreen(
-            lighttheme: true,
+            themevalue: false,
           ),
         ),
         GetPage(
