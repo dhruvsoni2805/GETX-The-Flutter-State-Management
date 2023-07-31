@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_x_tut/State_Management/counterController.dart';
 import 'package:get_x_tut/State_Management/counterScreen.dart';
 import 'package:get_x_tut/change_lang.dart';
-import 'package:get_x_tut/image_picker/Image_picker.dart';
+import 'package:get_x_tut/image_picker/image_picker.dart';
 import 'package:get_x_tut/third_screen.dart';
 
 class HomeScreen extends StatefulWidget {

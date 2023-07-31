@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_x_tut/Fourth_screen.dart';
 import 'package:get_x_tut/homescreen.dart';
 import 'package:get_x_tut/lang.dart';
-import 'package:get_x_tut/image_picker/Image_picker.dart';
+import 'package:get_x_tut/image_picker/image_picker.dart';
 import 'package:get_x_tut/third_screen.dart';
 
 void main() {
