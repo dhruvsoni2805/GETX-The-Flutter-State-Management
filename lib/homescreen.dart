@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x_tut/State_Management/counterController.dart';
 import 'package:get_x_tut/State_Management/counterScreen.dart';
-import 'package:get_x_tut/changeLang.dart';
+import 'package:get_x_tut/change_lang.dart';
 import 'package:get_x_tut/image_picker/Image_picker.dart';
 import 'package:get_x_tut/third_screen.dart';
 
@@ -14,7 +14,6 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  // final Themecontroller themecontrolller = Get.put(Themecontroller());
   final CounterController switchcontroller = Get.put(CounterController());
   var lighttheme = true;
 
@@ -43,7 +42,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               : Get.changeTheme(
                                   ThemeData.light(useMaterial3: true));
                         }),
-                Text(switchcontroller.themeValue.value
+                    Text(switchcontroller.themeValue.value
                         ? "Dark Mode On"
                         : "Light Mode On")
                   ],

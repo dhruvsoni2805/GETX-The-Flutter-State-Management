@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class FourthScreen extends StatefulWidget {
-  var name;
-  FourthScreen({super.key, this.name});
+  final dynamic name;
+
+  const FourthScreen({super.key, this.name});
 
   @override
   State<FourthScreen> createState() => _FourthScreenState();

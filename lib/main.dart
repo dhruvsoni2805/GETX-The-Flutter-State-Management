@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x_tut/Fourth_screen.dart';
-import 'package:get_x_tut/HomePage.dart';
+import 'package:get_x_tut/homescreen.dart';
 import 'package:get_x_tut/lang.dart';
 import 'package:get_x_tut/image_picker/Image_picker.dart';
 import 'package:get_x_tut/third_screen.dart';
@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      locale: Locale('en', 'US'),
-      fallbackLocale: Locale('en', 'US'),
+      locale: const Locale('en', 'US'),
+      fallbackLocale: const Locale('en', 'US'),
       translations: AppLang(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
@@ -49,13 +49,13 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/ThirdScreen',
-          page: () => ThirdScreen(
+          page: () => const ThirdScreen(
             themevalue: false,
           ),
         ),
         GetPage(
           name: '/FourthScreen',
-          page: () => FourthScreen(),
+          page: () => const FourthScreen(),
         )
       ],
     );
