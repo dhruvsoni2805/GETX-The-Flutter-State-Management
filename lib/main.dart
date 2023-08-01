@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x_tut/Fourth_screen.dart';
+import 'package:get_x_tut/Login_screen/Login%20screen.dart';
 import 'package:get_x_tut/homescreen.dart';
-import 'package:get_x_tut/lang.dart';
+import 'package:get_x_tut/lang_class.dart';
 import 'package:get_x_tut/image_picker/image_picker.dart';
 import 'package:get_x_tut/third_screen.dart';
 
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
       //   primarySwatch: Colors.indigo,
       //   useMaterial3: true,
       // ),
-      home: const HomeScreen(),
+      home: const LoginScreen(),
       getPages: [
         GetPage(
           name: '/',
